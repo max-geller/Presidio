@@ -31,6 +31,41 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "stock": {
+      "tags": []
+    },
+    "stock-e2e": {
+      "tags": [],
+      "implicitDependencies": ["stock"]
+    },
+    "booking": {
+      "tags": []
+    },
+    "booking-e2e": {
+      "tags": [],
+      "implicitDependencies": ["booking"]
+    },
+    "training": {
+      "tags": []
+    },
+    "training-e2e": {
+      "tags": [],
+      "implicitDependencies": ["training"]
+    },
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin"]
+    },
+    "art": {
+      "tags": []
+    },
+    "art-e2e": {
+      "tags": [],
+      "implicitDependencies": ["art"]
     }
   }
 }
