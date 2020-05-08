@@ -1,0 +1,3696 @@
+{
+  "projectGraph": {
+    "nodes": {
+      "api-interfaces": {
+        "name": "api-interfaces",
+        "type": "lib",
+        "data": {
+          "root": "libs/api-interfaces",
+          "sourceRoot": "libs/api-interfaces/src",
+          "projectType": "library",
+          "schematics": {},
+          "architect": {
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "libs/api-interfaces/tsconfig.lib.json",
+                  "libs/api-interfaces/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!libs/api-interfaces/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "libs/api-interfaces/jest.config.js",
+                "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
+                "passWithNoTests": true
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "libs/api-interfaces/jest.config.js",
+              "ext": ".js",
+              "mtime": 1586042243817.437
+            },
+            {
+              "file": "libs/api-interfaces/README.md",
+              "ext": ".md",
+              "mtime": 1586042243815.4424
+            },
+            {
+              "file": "libs/api-interfaces/src/index.ts",
+              "ext": ".ts",
+              "mtime": 1586042243817.437
+            },
+            {
+              "file": "libs/api-interfaces/src/lib/api-interfaces.ts",
+              "ext": ".ts",
+              "mtime": 1586042243817.437
+            },
+            {
+              "file": "libs/api-interfaces/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1586042243816.4387
+            },
+            {
+              "file": "libs/api-interfaces/tsconfig.lib.json",
+              "ext": ".json",
+              "mtime": 1586042243816.4387
+            },
+            {
+              "file": "libs/api-interfaces/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1586042243818.4343
+            },
+            {
+              "file": "libs/api-interfaces/tslint.json",
+              "ext": ".json",
+              "mtime": 1586042243815.4424
+            }
+          ]
+        }
+      },
+      "training-e2e": {
+        "name": "training-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/training-e2e",
+          "sourceRoot": "apps/training-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/training-e2e/cypress.json",
+                "tsConfig": "apps/training-e2e/tsconfig.e2e.json",
+                "devServerTarget": "training:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "training:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/training-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/training-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/training-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1587658057604.5642
+            },
+            {
+              "file": "apps/training-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1587658057607.5508
+            },
+            {
+              "file": "apps/training-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658057608.5486
+            },
+            {
+              "file": "apps/training-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1587658057608.5486
+            },
+            {
+              "file": "apps/training-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1587658057609.546
+            },
+            {
+              "file": "apps/training-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1587658057610.543
+            },
+            {
+              "file": "apps/training-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1587658057610.543
+            },
+            {
+              "file": "apps/training-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1587658057605.5557
+            },
+            {
+              "file": "apps/training-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658057606.5537
+            },
+            {
+              "file": "apps/training-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658057604.5642
+            }
+          ]
+        }
+      },
+      "landing-e2e": {
+        "name": "landing-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/landing-e2e",
+          "sourceRoot": "apps/landing-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/landing-e2e/cypress.json",
+                "tsConfig": "apps/landing-e2e/tsconfig.e2e.json",
+                "devServerTarget": "landing:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "landing:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/landing-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/landing-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/landing-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1586042243804.4717
+            },
+            {
+              "file": "apps/landing-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1586042243806.4653
+            },
+            {
+              "file": "apps/landing-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1586042243807.4636
+            },
+            {
+              "file": "apps/landing-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1586042243807.4636
+            },
+            {
+              "file": "apps/landing-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1586042243808.461
+            },
+            {
+              "file": "apps/landing-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1586042243808.461
+            },
+            {
+              "file": "apps/landing-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1586042243808.461
+            },
+            {
+              "file": "apps/landing-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1586042243805.469
+            },
+            {
+              "file": "apps/landing-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1586042243805.469
+            },
+            {
+              "file": "apps/landing-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1586042243804.4717
+            }
+          ]
+        }
+      },
+      "booking-e2e": {
+        "name": "booking-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/booking-e2e",
+          "sourceRoot": "apps/booking-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/booking-e2e/cypress.json",
+                "tsConfig": "apps/booking-e2e/tsconfig.e2e.json",
+                "devServerTarget": "booking:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "booking:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/booking-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/booking-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/booking-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1587657928819.6814
+            },
+            {
+              "file": "apps/booking-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1587657928823.7126
+            },
+            {
+              "file": "apps/booking-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587657928824.692
+            },
+            {
+              "file": "apps/booking-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1587657928825.6667
+            },
+            {
+              "file": "apps/booking-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1587657928826.7634
+            },
+            {
+              "file": "apps/booking-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1587657928827.6611
+            },
+            {
+              "file": "apps/booking-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1587657928828.66
+            },
+            {
+              "file": "apps/booking-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1587657928820.7944
+            },
+            {
+              "file": "apps/booking-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587657928821.6765
+            },
+            {
+              "file": "apps/booking-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1587657928818.7434
+            }
+          ]
+        }
+      },
+      "stock-e2e": {
+        "name": "stock-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/stock-e2e",
+          "sourceRoot": "apps/stock-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/stock-e2e/cypress.json",
+                "tsConfig": "apps/stock-e2e/tsconfig.e2e.json",
+                "devServerTarget": "stock:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "stock:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/stock-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/stock-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/stock-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1587657897135.8767
+            },
+            {
+              "file": "apps/stock-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1587657897139.8674
+            },
+            {
+              "file": "apps/stock-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587657897139.8674
+            },
+            {
+              "file": "apps/stock-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1587657897141.8918
+            },
+            {
+              "file": "apps/stock-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1587657897142.8887
+            },
+            {
+              "file": "apps/stock-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1587657897143.8562
+            },
+            {
+              "file": "apps/stock-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1587657897143.977
+            },
+            {
+              "file": "apps/stock-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1587657897136.8752
+            },
+            {
+              "file": "apps/stock-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587657897137.872
+            },
+            {
+              "file": "apps/stock-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1587657897135.8767
+            }
+          ]
+        }
+      },
+      "admin-e2e": {
+        "name": "admin-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/admin-e2e",
+          "sourceRoot": "apps/admin-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/admin-e2e/cypress.json",
+                "tsConfig": "apps/admin-e2e/tsconfig.e2e.json",
+                "devServerTarget": "admin:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "admin:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/admin-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/admin-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/admin-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1587658080853.4614
+            },
+            {
+              "file": "apps/admin-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1587658080855.456
+            },
+            {
+              "file": "apps/admin-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658080856.4822
+            },
+            {
+              "file": "apps/admin-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1587658080857.5938
+            },
+            {
+              "file": "apps/admin-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1587658080858.4507
+            },
+            {
+              "file": "apps/admin-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1587658080858.4507
+            },
+            {
+              "file": "apps/admin-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1587658080859.448
+            },
+            {
+              "file": "apps/admin-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1587658080853.6162
+            },
+            {
+              "file": "apps/admin-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658080854.5159
+            },
+            {
+              "file": "apps/admin-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658080852.7913
+            }
+          ]
+        }
+      },
+      "training": {
+        "name": "training",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/training",
+          "sourceRoot": "apps/training/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/training",
+                "index": "apps/training/src/index.html",
+                "main": "apps/training/src/main.ts",
+                "polyfills": "apps/training/src/polyfills.ts",
+                "tsConfig": "apps/training/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/training/src/favicon.ico",
+                  "apps/training/src/assets"
+                ],
+                "styles": [
+                  "apps/training/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/training/src/environments/environment.ts",
+                      "with": "apps/training/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "training:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "training:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "training:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/training/tsconfig.app.json",
+                  "apps/training/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/training/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/training/jest.config.js",
+                "tsConfig": "apps/training/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/training/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/training/browserslist",
+              "ext": "",
+              "mtime": 1587658057592.4612
+            },
+            {
+              "file": "apps/training/jest.config.js",
+              "ext": ".js",
+              "mtime": 1587658057602.5884
+            },
+            {
+              "file": "apps/training/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1587658057599.573
+            },
+            {
+              "file": "apps/training/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1587658057601.594
+            },
+            {
+              "file": "apps/training/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658057600.5703
+            },
+            {
+              "file": "apps/training/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1587658057601.594
+            },
+            {
+              "file": "apps/training/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587658057599.573
+            },
+            {
+              "file": "apps/training/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1587658057597.4255
+            },
+            {
+              "file": "apps/training/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1587658057598.4229
+            },
+            {
+              "file": "apps/training/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1587658057598.8154
+            },
+            {
+              "file": "apps/training/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1587658057592.4612
+            },
+            {
+              "file": "apps/training/src/index.html",
+              "ext": ".html",
+              "mtime": 1587658057594.433
+            },
+            {
+              "file": "apps/training/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1587658057595.431
+            },
+            {
+              "file": "apps/training/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1587658057595.431
+            },
+            {
+              "file": "apps/training/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1587658057596.4297
+            },
+            {
+              "file": "apps/training/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1587658057603.7827
+            },
+            {
+              "file": "apps/training/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1587658057593.436
+            },
+            {
+              "file": "apps/training/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658057590.4463
+            },
+            {
+              "file": "apps/training/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1587658057602.5884
+            },
+            {
+              "file": "apps/training/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658057594.433
+            }
+          ]
+        }
+      },
+      "landing": {
+        "name": "landing",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/landing",
+          "sourceRoot": "apps/landing/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/landing",
+                "index": "apps/landing/src/index.html",
+                "main": "apps/landing/src/main.ts",
+                "polyfills": "apps/landing/src/polyfills.ts",
+                "tsConfig": "apps/landing/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/landing/src/favicon.ico",
+                  "apps/landing/src/assets"
+                ],
+                "styles": [
+                  "apps/landing/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/landing/src/environments/environment.ts",
+                      "with": "apps/landing/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "landing:build",
+                "proxyConfig": "apps/landing/proxy.conf.json"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "landing:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "landing:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/landing/tsconfig.app.json",
+                  "apps/landing/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/landing/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/landing/jest.config.js",
+                "tsConfig": "apps/landing/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/landing/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/landing/browserslist",
+              "ext": "",
+              "mtime": 1586042243796.4932
+            },
+            {
+              "file": "apps/landing/jest.config.js",
+              "ext": ".js",
+              "mtime": 1586042243803.474
+            },
+            {
+              "file": "apps/landing/proxy.conf.json",
+              "ext": ".json",
+              "mtime": 1586042243813.4478
+            },
+            {
+              "file": "apps/landing/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1586042243801.4797
+            },
+            {
+              "file": "apps/landing/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1586042243803.474
+            },
+            {
+              "file": "apps/landing/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1586042243802.4775
+            },
+            {
+              "file": "apps/landing/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1586042243802.4775
+            },
+            {
+              "file": "apps/landing/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587658582340.9243
+            },
+            {
+              "file": "apps/landing/src/app/nav/nav.module.ts",
+              "ext": ".ts",
+              "mtime": 1587658582340.9243
+            },
+            {
+              "file": "apps/landing/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1586042243800.4817
+            },
+            {
+              "file": "apps/landing/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1586042243800.4817
+            },
+            {
+              "file": "apps/landing/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1586042243801.4797
+            },
+            {
+              "file": "apps/landing/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1586042243796.4932
+            },
+            {
+              "file": "apps/landing/src/index.html",
+              "ext": ".html",
+              "mtime": 1586042243798.497
+            },
+            {
+              "file": "apps/landing/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1586042243799.485
+            },
+            {
+              "file": "apps/landing/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1586042243799.485
+            },
+            {
+              "file": "apps/landing/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1586042243800.4817
+            },
+            {
+              "file": "apps/landing/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1586042243804.4717
+            },
+            {
+              "file": "apps/landing/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1586042243798.497
+            },
+            {
+              "file": "apps/landing/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1586042243795.4956
+            },
+            {
+              "file": "apps/landing/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1586042243803.474
+            },
+            {
+              "file": "apps/landing/tslint.json",
+              "ext": ".json",
+              "mtime": 1586042243798.497
+            }
+          ]
+        }
+      },
+      "booking": {
+        "name": "booking",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/booking",
+          "sourceRoot": "apps/booking/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/booking",
+                "index": "apps/booking/src/index.html",
+                "main": "apps/booking/src/main.ts",
+                "polyfills": "apps/booking/src/polyfills.ts",
+                "tsConfig": "apps/booking/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/booking/src/favicon.ico",
+                  "apps/booking/src/assets"
+                ],
+                "styles": [
+                  "apps/booking/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/booking/src/environments/environment.ts",
+                      "with": "apps/booking/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "booking:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "booking:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "booking:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/booking/tsconfig.app.json",
+                  "apps/booking/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/booking/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/booking/jest.config.js",
+                "tsConfig": "apps/booking/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/booking/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/booking/browserslist",
+              "ext": "",
+              "mtime": 1587657928801.7307
+            },
+            {
+              "file": "apps/booking/jest.config.js",
+              "ext": ".js",
+              "mtime": 1587657928815.696
+            },
+            {
+              "file": "apps/booking/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1587657928812.7517
+            },
+            {
+              "file": "apps/booking/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1587657928815.696
+            },
+            {
+              "file": "apps/booking/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587657928813.6985
+            },
+            {
+              "file": "apps/booking/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1587657928814.7104
+            },
+            {
+              "file": "apps/booking/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587657928811.735
+            },
+            {
+              "file": "apps/booking/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1587657928808.711
+            },
+            {
+              "file": "apps/booking/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1587657928809.7087
+            },
+            {
+              "file": "apps/booking/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1587657928809.7087
+            },
+            {
+              "file": "apps/booking/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1587657928800.7354
+            },
+            {
+              "file": "apps/booking/src/index.html",
+              "ext": ".html",
+              "mtime": 1587657928804.752
+            },
+            {
+              "file": "apps/booking/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1587657928805.7185
+            },
+            {
+              "file": "apps/booking/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1587657928806.7173
+            },
+            {
+              "file": "apps/booking/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1587657928807.7134
+            },
+            {
+              "file": "apps/booking/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1587657928817.6904
+            },
+            {
+              "file": "apps/booking/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1587657928802.9192
+            },
+            {
+              "file": "apps/booking/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587657928792.5508
+            },
+            {
+              "file": "apps/booking/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1587657928816.6904
+            },
+            {
+              "file": "apps/booking/tslint.json",
+              "ext": ".json",
+              "mtime": 1587657928803.7983
+            }
+          ]
+        }
+      },
+      "art-e2e": {
+        "name": "art-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/art-e2e",
+          "sourceRoot": "apps/art-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/art-e2e/cypress.json",
+                "tsConfig": "apps/art-e2e/tsconfig.e2e.json",
+                "devServerTarget": "art:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "art:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/art-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/art-e2e/**"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/art-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1587658421627.3281
+            },
+            {
+              "file": "apps/art-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1587658421630.358
+            },
+            {
+              "file": "apps/art-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658421631.6775
+            },
+            {
+              "file": "apps/art-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1587658421633.349
+            },
+            {
+              "file": "apps/art-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1587658421634.3772
+            },
+            {
+              "file": "apps/art-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1587658421635.3474
+            },
+            {
+              "file": "apps/art-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1587658421635.3474
+            },
+            {
+              "file": "apps/art-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1587658421628.3296
+            },
+            {
+              "file": "apps/art-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658421629.359
+            },
+            {
+              "file": "apps/art-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658421626.1882
+            }
+          ]
+        }
+      },
+      "stock": {
+        "name": "stock",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/stock",
+          "sourceRoot": "apps/stock/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/stock",
+                "index": "apps/stock/src/index.html",
+                "main": "apps/stock/src/main.ts",
+                "polyfills": "apps/stock/src/polyfills.ts",
+                "tsConfig": "apps/stock/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/stock/src/favicon.ico",
+                  "apps/stock/src/assets"
+                ],
+                "styles": [
+                  "apps/stock/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/stock/src/environments/environment.ts",
+                      "with": "apps/stock/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "stock:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "stock:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "stock:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/stock/tsconfig.app.json",
+                  "apps/stock/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/stock/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/stock/jest.config.js",
+                "tsConfig": "apps/stock/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/stock/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/stock/browserslist",
+              "ext": "",
+              "mtime": 1587657897118.9233
+            },
+            {
+              "file": "apps/stock/jest.config.js",
+              "ext": ".js",
+              "mtime": 1587657897131.8887
+            },
+            {
+              "file": "apps/stock/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1587657897128.8967
+            },
+            {
+              "file": "apps/stock/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1587657897130.9087
+            },
+            {
+              "file": "apps/stock/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587657897129.8938
+            },
+            {
+              "file": "apps/stock/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1587657897130.9087
+            },
+            {
+              "file": "apps/stock/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587657897127.9011
+            },
+            {
+              "file": "apps/stock/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1587657897124.9072
+            },
+            {
+              "file": "apps/stock/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1587657897125.904
+            },
+            {
+              "file": "apps/stock/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1587657897126.9011
+            },
+            {
+              "file": "apps/stock/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1587657897117.6438
+            },
+            {
+              "file": "apps/stock/src/index.html",
+              "ext": ".html",
+              "mtime": 1587657897120.917
+            },
+            {
+              "file": "apps/stock/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1587657897121.917
+            },
+            {
+              "file": "apps/stock/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1587657897122.9988
+            },
+            {
+              "file": "apps/stock/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1587657897122.9988
+            },
+            {
+              "file": "apps/stock/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1587657897133.8828
+            },
+            {
+              "file": "apps/stock/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1587657897119.9194
+            },
+            {
+              "file": "apps/stock/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587657897116.5012
+            },
+            {
+              "file": "apps/stock/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1587657897132.8853
+            },
+            {
+              "file": "apps/stock/tslint.json",
+              "ext": ".json",
+              "mtime": 1587657897119.9194
+            }
+          ]
+        }
+      },
+      "admin": {
+        "name": "admin",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/admin",
+          "sourceRoot": "apps/admin/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/admin",
+                "index": "apps/admin/src/index.html",
+                "main": "apps/admin/src/main.ts",
+                "polyfills": "apps/admin/src/polyfills.ts",
+                "tsConfig": "apps/admin/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/admin/src/favicon.ico",
+                  "apps/admin/src/assets"
+                ],
+                "styles": [
+                  "apps/admin/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/admin/src/environments/environment.ts",
+                      "with": "apps/admin/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "admin:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "admin:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "admin:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/admin/tsconfig.app.json",
+                  "apps/admin/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/admin/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/admin/jest.config.js",
+                "tsConfig": "apps/admin/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/admin/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/admin/browserslist",
+              "ext": "",
+              "mtime": 1587658080840.676
+            },
+            {
+              "file": "apps/admin/jest.config.js",
+              "ext": ".js",
+              "mtime": 1587658080850.797
+            },
+            {
+              "file": "apps/admin/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1587658080847.693
+            },
+            {
+              "file": "apps/admin/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1587658080849.7993
+            },
+            {
+              "file": "apps/admin/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658080848.6902
+            },
+            {
+              "file": "apps/admin/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1587658080849.7993
+            },
+            {
+              "file": "apps/admin/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587658080847.693
+            },
+            {
+              "file": "apps/admin/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1587658080845.6997
+            },
+            {
+              "file": "apps/admin/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1587658080845.6997
+            },
+            {
+              "file": "apps/admin/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1587658080846.6958
+            },
+            {
+              "file": "apps/admin/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1587658080839.993
+            },
+            {
+              "file": "apps/admin/src/index.html",
+              "ext": ".html",
+              "mtime": 1587658080841.7065
+            },
+            {
+              "file": "apps/admin/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1587658080842.7854
+            },
+            {
+              "file": "apps/admin/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1587658080844.058
+            },
+            {
+              "file": "apps/admin/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1587658080844.7102
+            },
+            {
+              "file": "apps/admin/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1587658080851.8242
+            },
+            {
+              "file": "apps/admin/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1587658080840.676
+            },
+            {
+              "file": "apps/admin/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658080838.6816
+            },
+            {
+              "file": "apps/admin/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1587658080850.797
+            },
+            {
+              "file": "apps/admin/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658080841.7065
+            }
+          ]
+        }
+      },
+      "api": {
+        "name": "api",
+        "type": "app",
+        "data": {
+          "root": "apps/api",
+          "sourceRoot": "apps/api/src",
+          "projectType": "application",
+          "prefix": "api",
+          "schematics": {},
+          "architect": {
+            "build": {
+              "builder": "@nrwl/node:build",
+              "options": {
+                "outputPath": "dist/apps/api",
+                "main": "apps/api/src/main.ts",
+                "tsConfig": "apps/api/tsconfig.app.json",
+                "assets": [
+                  "apps/api/src/assets"
+                ]
+              },
+              "configurations": {
+                "production": {
+                  "optimization": true,
+                  "extractLicenses": true,
+                  "inspect": false,
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/api/src/environments/environment.ts",
+                      "with": "apps/api/src/environments/environment.prod.ts"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@nrwl/node:execute",
+              "options": {
+                "buildTarget": "api:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/api/tsconfig.app.json",
+                  "apps/api/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/api/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/api/jest.config.js",
+                "tsConfig": "apps/api/tsconfig.spec.json",
+                "passWithNoTests": true
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/api/jest.config.js",
+              "ext": ".js",
+              "mtime": 1586042243812.4504
+            },
+            {
+              "file": "apps/api/src/app/.gitkeep",
+              "ext": "",
+              "mtime": 1586042243811.453
+            },
+            {
+              "file": "apps/api/src/app/app.controller.spec.ts",
+              "ext": ".ts",
+              "mtime": 1586042243813.4478
+            },
+            {
+              "file": "apps/api/src/app/app.controller.ts",
+              "ext": ".ts",
+              "mtime": 1586042243813.4478
+            },
+            {
+              "file": "apps/api/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1586042243814.4448
+            },
+            {
+              "file": "apps/api/src/app/app.service.spec.ts",
+              "ext": ".ts",
+              "mtime": 1586042243814.4448
+            },
+            {
+              "file": "apps/api/src/app/app.service.ts",
+              "ext": ".ts",
+              "mtime": 1586042243814.4448
+            },
+            {
+              "file": "apps/api/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1586042243811.453
+            },
+            {
+              "file": "apps/api/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1586042243811.453
+            },
+            {
+              "file": "apps/api/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1586042243812.4504
+            },
+            {
+              "file": "apps/api/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1586042243810.4558
+            },
+            {
+              "file": "apps/api/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1586042243809.4585
+            },
+            {
+              "file": "apps/api/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1586042243809.4585
+            },
+            {
+              "file": "apps/api/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1586042243812.4504
+            },
+            {
+              "file": "apps/api/tslint.json",
+              "ext": ".json",
+              "mtime": 1586042243809.4585
+            }
+          ]
+        }
+      },
+      "art": {
+        "name": "art",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/art",
+          "sourceRoot": "apps/art/src",
+          "prefix": "presidio",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/art",
+                "index": "apps/art/src/index.html",
+                "main": "apps/art/src/main.ts",
+                "polyfills": "apps/art/src/polyfills.ts",
+                "tsConfig": "apps/art/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/art/src/favicon.ico",
+                  "apps/art/src/assets"
+                ],
+                "styles": [
+                  "apps/art/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/art/src/environments/environment.ts",
+                      "with": "apps/art/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "art:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "art:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "art:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/art/tsconfig.app.json",
+                  "apps/art/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/art/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/art/jest.config.js",
+                "tsConfig": "apps/art/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/art/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/art/browserslist",
+              "ext": "",
+              "mtime": 1587658421600.495
+            },
+            {
+              "file": "apps/art/jest.config.js",
+              "ext": ".js",
+              "mtime": 1587658421623.3574
+            },
+            {
+              "file": "apps/art/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1587658421620.2068
+            },
+            {
+              "file": "apps/art/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1587658421623.199
+            },
+            {
+              "file": "apps/art/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1587658421620.2068
+            },
+            {
+              "file": "apps/art/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1587658421621.2036
+            },
+            {
+              "file": "apps/art/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1587658421619.2112
+            },
+            {
+              "file": "apps/art/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1587658421615.228
+            },
+            {
+              "file": "apps/art/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1587658421617.2144
+            },
+            {
+              "file": "apps/art/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1587658421617.2144
+            },
+            {
+              "file": "apps/art/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1587658421600.2249
+            },
+            {
+              "file": "apps/art/src/index.html",
+              "ext": ".html",
+              "mtime": 1587658421611.2266
+            },
+            {
+              "file": "apps/art/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1587658421612.4863
+            },
+            {
+              "file": "apps/art/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1587658421613.3162
+            },
+            {
+              "file": "apps/art/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1587658421614.5044
+            },
+            {
+              "file": "apps/art/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1587658421625.193
+            },
+            {
+              "file": "apps/art/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1587658421610.0354
+            },
+            {
+              "file": "apps/art/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1587658421599.229
+            },
+            {
+              "file": "apps/art/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1587658421624.196
+            },
+            {
+              "file": "apps/art/tslint.json",
+              "ext": ".json",
+              "mtime": 1587658421610.862
+            }
+          ]
+        }
+      },
+      "@nrwl/angular": {
+        "type": "npm",
+        "name": "@nrwl/angular",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "@angular/animations": {
+        "type": "npm",
+        "name": "@angular/animations",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/common": {
+        "type": "npm",
+        "name": "@angular/common",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/compiler": {
+        "type": "npm",
+        "name": "@angular/compiler",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/core": {
+        "type": "npm",
+        "name": "@angular/core",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/forms": {
+        "type": "npm",
+        "name": "@angular/forms",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/platform-browser": {
+        "type": "npm",
+        "name": "@angular/platform-browser",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/platform-browser-dynamic": {
+        "type": "npm",
+        "name": "@angular/platform-browser-dynamic",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/router": {
+        "type": "npm",
+        "name": "@angular/router",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "core-js": {
+        "type": "npm",
+        "name": "core-js",
+        "data": {
+          "version": "^2.5.4",
+          "files": []
+        }
+      },
+      "rxjs": {
+        "type": "npm",
+        "name": "rxjs",
+        "data": {
+          "version": "~6.5.4",
+          "files": []
+        }
+      },
+      "zone.js": {
+        "type": "npm",
+        "name": "zone.js",
+        "data": {
+          "version": "^0.10.2",
+          "files": []
+        }
+      },
+      "@nestjs/common": {
+        "type": "npm",
+        "name": "@nestjs/common",
+        "data": {
+          "version": "^6.8.3",
+          "files": []
+        }
+      },
+      "@nestjs/core": {
+        "type": "npm",
+        "name": "@nestjs/core",
+        "data": {
+          "version": "^6.8.3",
+          "files": []
+        }
+      },
+      "@nestjs/platform-express": {
+        "type": "npm",
+        "name": "@nestjs/platform-express",
+        "data": {
+          "version": "^6.8.3",
+          "files": []
+        }
+      },
+      "reflect-metadata": {
+        "type": "npm",
+        "name": "reflect-metadata",
+        "data": {
+          "version": "^0.1.13",
+          "files": []
+        }
+      },
+      "@angular/cli": {
+        "type": "npm",
+        "name": "@angular/cli",
+        "data": {
+          "version": "9.1.0",
+          "files": []
+        }
+      },
+      "@nrwl/workspace": {
+        "type": "npm",
+        "name": "@nrwl/workspace",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "@types/node": {
+        "type": "npm",
+        "name": "@types/node",
+        "data": {
+          "version": "~8.9.4",
+          "files": []
+        }
+      },
+      "dotenv": {
+        "type": "npm",
+        "name": "dotenv",
+        "data": {
+          "version": "6.2.0",
+          "files": []
+        }
+      },
+      "ts-node": {
+        "type": "npm",
+        "name": "ts-node",
+        "data": {
+          "version": "~7.0.0",
+          "files": []
+        }
+      },
+      "tslint": {
+        "type": "npm",
+        "name": "tslint",
+        "data": {
+          "version": "~6.0.0",
+          "files": []
+        }
+      },
+      "eslint": {
+        "type": "npm",
+        "name": "eslint",
+        "data": {
+          "version": "6.8.0",
+          "files": []
+        }
+      },
+      "typescript": {
+        "type": "npm",
+        "name": "typescript",
+        "data": {
+          "version": "~3.8.3",
+          "files": []
+        }
+      },
+      "prettier": {
+        "type": "npm",
+        "name": "prettier",
+        "data": {
+          "version": "1.19.1",
+          "files": []
+        }
+      },
+      "@nrwl/nest": {
+        "type": "npm",
+        "name": "@nrwl/nest",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "@angular/compiler-cli": {
+        "type": "npm",
+        "name": "@angular/compiler-cli",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular/language-service": {
+        "type": "npm",
+        "name": "@angular/language-service",
+        "data": {
+          "version": "^9.1.0",
+          "files": []
+        }
+      },
+      "@angular-devkit/build-angular": {
+        "type": "npm",
+        "name": "@angular-devkit/build-angular",
+        "data": {
+          "version": "0.901.0",
+          "files": []
+        }
+      },
+      "codelyzer": {
+        "type": "npm",
+        "name": "codelyzer",
+        "data": {
+          "version": "~5.0.1",
+          "files": []
+        }
+      },
+      "jest-preset-angular": {
+        "type": "npm",
+        "name": "jest-preset-angular",
+        "data": {
+          "version": "8.1.2",
+          "files": []
+        }
+      },
+      "@nrwl/jest": {
+        "type": "npm",
+        "name": "@nrwl/jest",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "jest": {
+        "type": "npm",
+        "name": "jest",
+        "data": {
+          "version": "25.2.3",
+          "files": []
+        }
+      },
+      "@types/jest": {
+        "type": "npm",
+        "name": "@types/jest",
+        "data": {
+          "version": "25.1.4",
+          "files": []
+        }
+      },
+      "ts-jest": {
+        "type": "npm",
+        "name": "ts-jest",
+        "data": {
+          "version": "25.2.1",
+          "files": []
+        }
+      },
+      "cypress": {
+        "type": "npm",
+        "name": "cypress",
+        "data": {
+          "version": "^4.1.0",
+          "files": []
+        }
+      },
+      "@nrwl/cypress": {
+        "type": "npm",
+        "name": "@nrwl/cypress",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "@nrwl/node": {
+        "type": "npm",
+        "name": "@nrwl/node",
+        "data": {
+          "version": "9.2.2",
+          "files": []
+        }
+      },
+      "@nestjs/schematics": {
+        "type": "npm",
+        "name": "@nestjs/schematics",
+        "data": {
+          "version": "^6.7.0",
+          "files": []
+        }
+      },
+      "@nestjs/testing": {
+        "type": "npm",
+        "name": "@nestjs/testing",
+        "data": {
+          "version": "^6.8.3",
+          "files": []
+        }
+      }
+    },
+    "dependencies": {
+      "api-interfaces": [],
+      "training-e2e": [
+        {
+          "type": "implicit",
+          "source": "training-e2e",
+          "target": "training"
+        }
+      ],
+      "landing-e2e": [
+        {
+          "type": "implicit",
+          "source": "landing-e2e",
+          "target": "landing"
+        }
+      ],
+      "booking-e2e": [
+        {
+          "type": "implicit",
+          "source": "booking-e2e",
+          "target": "booking"
+        }
+      ],
+      "stock-e2e": [
+        {
+          "type": "implicit",
+          "source": "stock-e2e",
+          "target": "stock"
+        }
+      ],
+      "admin-e2e": [
+        {
+          "type": "implicit",
+          "source": "admin-e2e",
+          "target": "admin"
+        }
+      ],
+      "training": [
+        {
+          "type": "static",
+          "source": "training",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "training",
+          "target": "@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "training",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "training",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "training",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "training",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "landing": [
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "api-interfaces"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "@angular/common"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "landing",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "booking": [
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "booking",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "art-e2e": [
+        {
+          "type": "implicit",
+          "source": "art-e2e",
+          "target": "art"
+        }
+      ],
+      "stock": [
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "stock",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "admin": [
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "admin",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "api": [
+        {
+          "type": "static",
+          "source": "api",
+          "target": "api-interfaces"
+        },
+        {
+          "type": "static",
+          "source": "api",
+          "target": "@nestjs/testing"
+        },
+        {
+          "type": "static",
+          "source": "api",
+          "target": "@nestjs/common"
+        },
+        {
+          "type": "static",
+          "source": "api",
+          "target": "@nestjs/core"
+        }
+      ],
+      "art": [
+        {
+          "type": "static",
+          "source": "art",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "art",
+          "target": "@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "art",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "art",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "art",
+          "target": "zone.js"
+        },
+        {
+          "type": "static",
+          "source": "art",
+          "target": "jest-preset-angular"
+        }
+      ],
+      "@nrwl/angular": [],
+      "@angular/animations": [],
+      "@angular/common": [],
+      "@angular/compiler": [],
+      "@angular/core": [],
+      "@angular/forms": [],
+      "@angular/platform-browser": [],
+      "@angular/platform-browser-dynamic": [],
+      "@angular/router": [],
+      "core-js": [],
+      "rxjs": [],
+      "zone.js": [],
+      "@nestjs/common": [],
+      "@nestjs/core": [],
+      "@nestjs/platform-express": [],
+      "reflect-metadata": [],
+      "@angular/cli": [],
+      "@nrwl/workspace": [],
+      "@types/node": [],
+      "dotenv": [],
+      "ts-node": [],
+      "tslint": [],
+      "eslint": [],
+      "typescript": [],
+      "prettier": [],
+      "@nrwl/nest": [],
+      "@angular/compiler-cli": [],
+      "@angular/language-service": [],
+      "@angular-devkit/build-angular": [],
+      "codelyzer": [],
+      "jest-preset-angular": [],
+      "@nrwl/jest": [],
+      "jest": [],
+      "@types/jest": [],
+      "ts-jest": [],
+      "cypress": [],
+      "@nrwl/cypress": [],
+      "@nrwl/node": [],
+      "@nestjs/schematics": [],
+      "@nestjs/testing": []
+    }
+  },
+  "fileMap": {
+    "api-interfaces": [
+      {
+        "file": "libs/api-interfaces/jest.config.js",
+        "ext": ".js",
+        "mtime": 1586042243817.437
+      },
+      {
+        "file": "libs/api-interfaces/README.md",
+        "ext": ".md",
+        "mtime": 1586042243815.4424
+      },
+      {
+        "file": "libs/api-interfaces/src/index.ts",
+        "ext": ".ts",
+        "mtime": 1586042243817.437
+      },
+      {
+        "file": "libs/api-interfaces/src/lib/api-interfaces.ts",
+        "ext": ".ts",
+        "mtime": 1586042243817.437
+      },
+      {
+        "file": "libs/api-interfaces/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1586042243816.4387
+      },
+      {
+        "file": "libs/api-interfaces/tsconfig.lib.json",
+        "ext": ".json",
+        "mtime": 1586042243816.4387
+      },
+      {
+        "file": "libs/api-interfaces/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1586042243818.4343
+      },
+      {
+        "file": "libs/api-interfaces/tslint.json",
+        "ext": ".json",
+        "mtime": 1586042243815.4424
+      }
+    ],
+    "training-e2e": [
+      {
+        "file": "apps/training-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1587658057604.5642
+      },
+      {
+        "file": "apps/training-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1587658057607.5508
+      },
+      {
+        "file": "apps/training-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658057608.5486
+      },
+      {
+        "file": "apps/training-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1587658057608.5486
+      },
+      {
+        "file": "apps/training-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1587658057609.546
+      },
+      {
+        "file": "apps/training-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1587658057610.543
+      },
+      {
+        "file": "apps/training-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1587658057610.543
+      },
+      {
+        "file": "apps/training-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1587658057605.5557
+      },
+      {
+        "file": "apps/training-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658057606.5537
+      },
+      {
+        "file": "apps/training-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658057604.5642
+      }
+    ],
+    "landing-e2e": [
+      {
+        "file": "apps/landing-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1586042243804.4717
+      },
+      {
+        "file": "apps/landing-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1586042243806.4653
+      },
+      {
+        "file": "apps/landing-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1586042243807.4636
+      },
+      {
+        "file": "apps/landing-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1586042243807.4636
+      },
+      {
+        "file": "apps/landing-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1586042243808.461
+      },
+      {
+        "file": "apps/landing-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1586042243808.461
+      },
+      {
+        "file": "apps/landing-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1586042243808.461
+      },
+      {
+        "file": "apps/landing-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1586042243805.469
+      },
+      {
+        "file": "apps/landing-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1586042243805.469
+      },
+      {
+        "file": "apps/landing-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1586042243804.4717
+      }
+    ],
+    "booking-e2e": [
+      {
+        "file": "apps/booking-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1587657928819.6814
+      },
+      {
+        "file": "apps/booking-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1587657928823.7126
+      },
+      {
+        "file": "apps/booking-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587657928824.692
+      },
+      {
+        "file": "apps/booking-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1587657928825.6667
+      },
+      {
+        "file": "apps/booking-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1587657928826.7634
+      },
+      {
+        "file": "apps/booking-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1587657928827.6611
+      },
+      {
+        "file": "apps/booking-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1587657928828.66
+      },
+      {
+        "file": "apps/booking-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1587657928820.7944
+      },
+      {
+        "file": "apps/booking-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587657928821.6765
+      },
+      {
+        "file": "apps/booking-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1587657928818.7434
+      }
+    ],
+    "stock-e2e": [
+      {
+        "file": "apps/stock-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1587657897135.8767
+      },
+      {
+        "file": "apps/stock-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1587657897139.8674
+      },
+      {
+        "file": "apps/stock-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587657897139.8674
+      },
+      {
+        "file": "apps/stock-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1587657897141.8918
+      },
+      {
+        "file": "apps/stock-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1587657897142.8887
+      },
+      {
+        "file": "apps/stock-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1587657897143.8562
+      },
+      {
+        "file": "apps/stock-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1587657897143.977
+      },
+      {
+        "file": "apps/stock-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1587657897136.8752
+      },
+      {
+        "file": "apps/stock-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587657897137.872
+      },
+      {
+        "file": "apps/stock-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1587657897135.8767
+      }
+    ],
+    "admin-e2e": [
+      {
+        "file": "apps/admin-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1587658080853.4614
+      },
+      {
+        "file": "apps/admin-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1587658080855.456
+      },
+      {
+        "file": "apps/admin-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658080856.4822
+      },
+      {
+        "file": "apps/admin-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1587658080857.5938
+      },
+      {
+        "file": "apps/admin-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1587658080858.4507
+      },
+      {
+        "file": "apps/admin-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1587658080858.4507
+      },
+      {
+        "file": "apps/admin-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1587658080859.448
+      },
+      {
+        "file": "apps/admin-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1587658080853.6162
+      },
+      {
+        "file": "apps/admin-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658080854.5159
+      },
+      {
+        "file": "apps/admin-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658080852.7913
+      }
+    ],
+    "training": [
+      {
+        "file": "apps/training/browserslist",
+        "ext": "",
+        "mtime": 1587658057592.4612
+      },
+      {
+        "file": "apps/training/jest.config.js",
+        "ext": ".js",
+        "mtime": 1587658057602.5884
+      },
+      {
+        "file": "apps/training/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1587658057599.573
+      },
+      {
+        "file": "apps/training/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1587658057601.594
+      },
+      {
+        "file": "apps/training/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658057600.5703
+      },
+      {
+        "file": "apps/training/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1587658057601.594
+      },
+      {
+        "file": "apps/training/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587658057599.573
+      },
+      {
+        "file": "apps/training/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1587658057597.4255
+      },
+      {
+        "file": "apps/training/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1587658057598.4229
+      },
+      {
+        "file": "apps/training/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1587658057598.8154
+      },
+      {
+        "file": "apps/training/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1587658057592.4612
+      },
+      {
+        "file": "apps/training/src/index.html",
+        "ext": ".html",
+        "mtime": 1587658057594.433
+      },
+      {
+        "file": "apps/training/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1587658057595.431
+      },
+      {
+        "file": "apps/training/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1587658057595.431
+      },
+      {
+        "file": "apps/training/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1587658057596.4297
+      },
+      {
+        "file": "apps/training/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1587658057603.7827
+      },
+      {
+        "file": "apps/training/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1587658057593.436
+      },
+      {
+        "file": "apps/training/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658057590.4463
+      },
+      {
+        "file": "apps/training/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1587658057602.5884
+      },
+      {
+        "file": "apps/training/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658057594.433
+      }
+    ],
+    "landing": [
+      {
+        "file": "apps/landing/browserslist",
+        "ext": "",
+        "mtime": 1586042243796.4932
+      },
+      {
+        "file": "apps/landing/jest.config.js",
+        "ext": ".js",
+        "mtime": 1586042243803.474
+      },
+      {
+        "file": "apps/landing/proxy.conf.json",
+        "ext": ".json",
+        "mtime": 1586042243813.4478
+      },
+      {
+        "file": "apps/landing/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1586042243801.4797
+      },
+      {
+        "file": "apps/landing/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1586042243803.474
+      },
+      {
+        "file": "apps/landing/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1586042243802.4775
+      },
+      {
+        "file": "apps/landing/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1586042243802.4775
+      },
+      {
+        "file": "apps/landing/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587658582340.9243
+      },
+      {
+        "file": "apps/landing/src/app/nav/nav.module.ts",
+        "ext": ".ts",
+        "mtime": 1587658582340.9243
+      },
+      {
+        "file": "apps/landing/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1586042243800.4817
+      },
+      {
+        "file": "apps/landing/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1586042243800.4817
+      },
+      {
+        "file": "apps/landing/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1586042243801.4797
+      },
+      {
+        "file": "apps/landing/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1586042243796.4932
+      },
+      {
+        "file": "apps/landing/src/index.html",
+        "ext": ".html",
+        "mtime": 1586042243798.497
+      },
+      {
+        "file": "apps/landing/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1586042243799.485
+      },
+      {
+        "file": "apps/landing/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1586042243799.485
+      },
+      {
+        "file": "apps/landing/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1586042243800.4817
+      },
+      {
+        "file": "apps/landing/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1586042243804.4717
+      },
+      {
+        "file": "apps/landing/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1586042243798.497
+      },
+      {
+        "file": "apps/landing/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1586042243795.4956
+      },
+      {
+        "file": "apps/landing/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1586042243803.474
+      },
+      {
+        "file": "apps/landing/tslint.json",
+        "ext": ".json",
+        "mtime": 1586042243798.497
+      }
+    ],
+    "booking": [
+      {
+        "file": "apps/booking/browserslist",
+        "ext": "",
+        "mtime": 1587657928801.7307
+      },
+      {
+        "file": "apps/booking/jest.config.js",
+        "ext": ".js",
+        "mtime": 1587657928815.696
+      },
+      {
+        "file": "apps/booking/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1587657928812.7517
+      },
+      {
+        "file": "apps/booking/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1587657928815.696
+      },
+      {
+        "file": "apps/booking/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587657928813.6985
+      },
+      {
+        "file": "apps/booking/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1587657928814.7104
+      },
+      {
+        "file": "apps/booking/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587657928811.735
+      },
+      {
+        "file": "apps/booking/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1587657928808.711
+      },
+      {
+        "file": "apps/booking/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1587657928809.7087
+      },
+      {
+        "file": "apps/booking/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1587657928809.7087
+      },
+      {
+        "file": "apps/booking/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1587657928800.7354
+      },
+      {
+        "file": "apps/booking/src/index.html",
+        "ext": ".html",
+        "mtime": 1587657928804.752
+      },
+      {
+        "file": "apps/booking/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1587657928805.7185
+      },
+      {
+        "file": "apps/booking/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1587657928806.7173
+      },
+      {
+        "file": "apps/booking/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1587657928807.7134
+      },
+      {
+        "file": "apps/booking/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1587657928817.6904
+      },
+      {
+        "file": "apps/booking/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1587657928802.9192
+      },
+      {
+        "file": "apps/booking/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587657928792.5508
+      },
+      {
+        "file": "apps/booking/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1587657928816.6904
+      },
+      {
+        "file": "apps/booking/tslint.json",
+        "ext": ".json",
+        "mtime": 1587657928803.7983
+      }
+    ],
+    "art-e2e": [
+      {
+        "file": "apps/art-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1587658421627.3281
+      },
+      {
+        "file": "apps/art-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1587658421630.358
+      },
+      {
+        "file": "apps/art-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658421631.6775
+      },
+      {
+        "file": "apps/art-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1587658421633.349
+      },
+      {
+        "file": "apps/art-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1587658421634.3772
+      },
+      {
+        "file": "apps/art-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1587658421635.3474
+      },
+      {
+        "file": "apps/art-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1587658421635.3474
+      },
+      {
+        "file": "apps/art-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1587658421628.3296
+      },
+      {
+        "file": "apps/art-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658421629.359
+      },
+      {
+        "file": "apps/art-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658421626.1882
+      }
+    ],
+    "stock": [
+      {
+        "file": "apps/stock/browserslist",
+        "ext": "",
+        "mtime": 1587657897118.9233
+      },
+      {
+        "file": "apps/stock/jest.config.js",
+        "ext": ".js",
+        "mtime": 1587657897131.8887
+      },
+      {
+        "file": "apps/stock/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1587657897128.8967
+      },
+      {
+        "file": "apps/stock/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1587657897130.9087
+      },
+      {
+        "file": "apps/stock/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587657897129.8938
+      },
+      {
+        "file": "apps/stock/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1587657897130.9087
+      },
+      {
+        "file": "apps/stock/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587657897127.9011
+      },
+      {
+        "file": "apps/stock/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1587657897124.9072
+      },
+      {
+        "file": "apps/stock/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1587657897125.904
+      },
+      {
+        "file": "apps/stock/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1587657897126.9011
+      },
+      {
+        "file": "apps/stock/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1587657897117.6438
+      },
+      {
+        "file": "apps/stock/src/index.html",
+        "ext": ".html",
+        "mtime": 1587657897120.917
+      },
+      {
+        "file": "apps/stock/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1587657897121.917
+      },
+      {
+        "file": "apps/stock/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1587657897122.9988
+      },
+      {
+        "file": "apps/stock/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1587657897122.9988
+      },
+      {
+        "file": "apps/stock/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1587657897133.8828
+      },
+      {
+        "file": "apps/stock/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1587657897119.9194
+      },
+      {
+        "file": "apps/stock/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587657897116.5012
+      },
+      {
+        "file": "apps/stock/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1587657897132.8853
+      },
+      {
+        "file": "apps/stock/tslint.json",
+        "ext": ".json",
+        "mtime": 1587657897119.9194
+      }
+    ],
+    "admin": [
+      {
+        "file": "apps/admin/browserslist",
+        "ext": "",
+        "mtime": 1587658080840.676
+      },
+      {
+        "file": "apps/admin/jest.config.js",
+        "ext": ".js",
+        "mtime": 1587658080850.797
+      },
+      {
+        "file": "apps/admin/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1587658080847.693
+      },
+      {
+        "file": "apps/admin/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1587658080849.7993
+      },
+      {
+        "file": "apps/admin/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658080848.6902
+      },
+      {
+        "file": "apps/admin/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1587658080849.7993
+      },
+      {
+        "file": "apps/admin/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587658080847.693
+      },
+      {
+        "file": "apps/admin/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1587658080845.6997
+      },
+      {
+        "file": "apps/admin/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1587658080845.6997
+      },
+      {
+        "file": "apps/admin/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1587658080846.6958
+      },
+      {
+        "file": "apps/admin/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1587658080839.993
+      },
+      {
+        "file": "apps/admin/src/index.html",
+        "ext": ".html",
+        "mtime": 1587658080841.7065
+      },
+      {
+        "file": "apps/admin/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1587658080842.7854
+      },
+      {
+        "file": "apps/admin/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1587658080844.058
+      },
+      {
+        "file": "apps/admin/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1587658080844.7102
+      },
+      {
+        "file": "apps/admin/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1587658080851.8242
+      },
+      {
+        "file": "apps/admin/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1587658080840.676
+      },
+      {
+        "file": "apps/admin/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658080838.6816
+      },
+      {
+        "file": "apps/admin/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1587658080850.797
+      },
+      {
+        "file": "apps/admin/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658080841.7065
+      }
+    ],
+    "api": [
+      {
+        "file": "apps/api/jest.config.js",
+        "ext": ".js",
+        "mtime": 1586042243812.4504
+      },
+      {
+        "file": "apps/api/src/app/.gitkeep",
+        "ext": "",
+        "mtime": 1586042243811.453
+      },
+      {
+        "file": "apps/api/src/app/app.controller.spec.ts",
+        "ext": ".ts",
+        "mtime": 1586042243813.4478
+      },
+      {
+        "file": "apps/api/src/app/app.controller.ts",
+        "ext": ".ts",
+        "mtime": 1586042243813.4478
+      },
+      {
+        "file": "apps/api/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1586042243814.4448
+      },
+      {
+        "file": "apps/api/src/app/app.service.spec.ts",
+        "ext": ".ts",
+        "mtime": 1586042243814.4448
+      },
+      {
+        "file": "apps/api/src/app/app.service.ts",
+        "ext": ".ts",
+        "mtime": 1586042243814.4448
+      },
+      {
+        "file": "apps/api/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1586042243811.453
+      },
+      {
+        "file": "apps/api/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1586042243811.453
+      },
+      {
+        "file": "apps/api/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1586042243812.4504
+      },
+      {
+        "file": "apps/api/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1586042243810.4558
+      },
+      {
+        "file": "apps/api/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1586042243809.4585
+      },
+      {
+        "file": "apps/api/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1586042243809.4585
+      },
+      {
+        "file": "apps/api/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1586042243812.4504
+      },
+      {
+        "file": "apps/api/tslint.json",
+        "ext": ".json",
+        "mtime": 1586042243809.4585
+      }
+    ],
+    "art": [
+      {
+        "file": "apps/art/browserslist",
+        "ext": "",
+        "mtime": 1587658421600.495
+      },
+      {
+        "file": "apps/art/jest.config.js",
+        "ext": ".js",
+        "mtime": 1587658421623.3574
+      },
+      {
+        "file": "apps/art/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1587658421620.2068
+      },
+      {
+        "file": "apps/art/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1587658421623.199
+      },
+      {
+        "file": "apps/art/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1587658421620.2068
+      },
+      {
+        "file": "apps/art/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1587658421621.2036
+      },
+      {
+        "file": "apps/art/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1587658421619.2112
+      },
+      {
+        "file": "apps/art/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1587658421615.228
+      },
+      {
+        "file": "apps/art/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1587658421617.2144
+      },
+      {
+        "file": "apps/art/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1587658421617.2144
+      },
+      {
+        "file": "apps/art/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1587658421600.2249
+      },
+      {
+        "file": "apps/art/src/index.html",
+        "ext": ".html",
+        "mtime": 1587658421611.2266
+      },
+      {
+        "file": "apps/art/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1587658421612.4863
+      },
+      {
+        "file": "apps/art/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1587658421613.3162
+      },
+      {
+        "file": "apps/art/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1587658421614.5044
+      },
+      {
+        "file": "apps/art/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1587658421625.193
+      },
+      {
+        "file": "apps/art/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1587658421610.0354
+      },
+      {
+        "file": "apps/art/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1587658421599.229
+      },
+      {
+        "file": "apps/art/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1587658421624.196
+      },
+      {
+        "file": "apps/art/tslint.json",
+        "ext": ".json",
+        "mtime": 1587658421610.862
+      }
+    ]
+  }
+}
