@@ -1,0 +1,38 @@
+[
+    {
+        "id": "video_hero_section_content",
+        "title": "Let's Get You Seeing From a Different Perspective...",
+        "date": "San Francisco FAA PART 107 Provider",
+        "btn_link": "/index-video",
+        "video_link": "https://www.youtube.com/watch?v=2ttCD1K1LlA"
+    }, 
+    {
+        "id": "video_story_section_contnet",
+        "title": "Our clients usually say that our compromise with innovation and the strategy.",
+        "subtitle": "Our Story",
+        "image": "./images/about.jpg",
+        "path": "/company",
+        "content": [
+            "Presidio Aerial Solutions is an aerial photography firm based in San Francisco, CA. Established in 2018, Presidio Aerial has become one of the most trusted names in the drone industry. Our clients include the biggest names in their respected industries, many of them repeat customers and referrals. We carry all necessary FAA licenses and certification, and carry operational insurances. As a leading provider of aerial photography in San Francisco, Presidio Aerial has quickly gained a reputation for safety and quality; our clients know they can expect the highest quality assets. We strive to provide quality services and work diligently to pursue this."
+        ]
+    },
+    {
+        "id": "video_project_section_content",
+        "title": "Our Awesome Project",
+        "subtitle": "SAMPLE THE GOODS"
+    },
+    {
+        "id": "video_clients_section_content",
+        "title": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui laborum.",
+        "subtitle": "OUR CLIENTS"
+    },
+    {
+        "id": "video_banner_section_content",
+        "banner_image": "./images/video.jpg"
+    },
+    {
+        "id": "video_recent_post_section_content",
+        "title": "Our Recent posts",
+        "subtitle": "SAMPLE THE GOODS"
+    }
+]

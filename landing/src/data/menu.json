@@ -1,0 +1,102 @@
+[
+    {
+        "title": "home",
+        "path": "/"
+    },
+    {
+        "title": "industries",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "title": "Real Estate",
+                "path": "/industries/real-estate"
+            },
+            {
+                "title": "Cinematic",
+                "path": "/industries/cinematic"
+            },
+            {
+                "title": "events",
+                "path": "/industries/events"
+            },
+            {
+                "title": "Construction",
+                "path": "/industries/construction"
+            },
+            {
+                "title": "Utilities & Inspections",
+                "path": "/industries/utilities"
+            },
+            {
+                "title": "Agriculture",
+                "path": "/industries/agriculture"
+            }
+        ]
+    },
+    {
+        "title": "services",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "title": "Aerial Videography",
+                "path": "/services/aerial"
+            },
+            {
+                "title": "Surveying / Mapping",
+                "path": "/services/aerial"
+            },
+            {
+                "title": "UAS Consulting",
+                "path": "/services/consulting"
+            },
+            {
+                "title": "FAA Exam Prep",
+                "path": "/services/training"
+            }
+        ]
+    },
+    {
+        "title": "training",
+        "path": "/services/training"
+    },
+    {
+        "title": "Media",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "title": "Stock Video Clips",
+                "path": "/media/stock-video"
+            },
+            {
+                "title": "Stock Photography",
+                "path": "/media/stock-photo"
+            }
+        ]
+    },
+    {
+        "title": "Shop",
+        "isSubmenu": true,
+        "submenu": [
+            {
+                "title": "Drones & UAS Sales",
+                "path": "/shop/drones"
+            },
+            {
+                "title": "Equipment Rentals",
+                "path": "/shop/rentals"
+            },
+            {
+                "title": "FPV Custom Shop",
+                "path": "/shop/fpv"
+            },
+            {
+                "title": "Art / Print Sales",
+                "path": "/shop/art"
+            }
+        ]
+    },
+    {
+        "title": "contact",
+        "path": "/contact"
+    }
+]
